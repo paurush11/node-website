@@ -1,0 +1,18 @@
+#error{
+    color: red;
+    font-size: 50px;
+    font-family: 'Michroma', sans-serif;
+
+}
+p{
+
+    font-size: 30px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+}
+.main-content{
+    flex-grow: 1;
+}

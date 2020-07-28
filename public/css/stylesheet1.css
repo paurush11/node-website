@@ -1,0 +1,177 @@
+.Title{
+
+    color:purple;
+    text-align: center;
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 180px;
+    padding: 20px;
+    margin: 10px;
+    width: 900px;
+    margin: auto;
+
+}
+
+.middle{
+    background-color:black;
+    text-align: left;
+    color:#66FCF1;
+    font-size: 40px;
+    border: medium;
+    border-style: ridge;
+    border-radius: 5%;
+    padding: 20px;
+    margin: 20px;
+    width: 800px;
+
+}
+
+body
+{
+    background-image: url("../img/29967c0267d58120fbcb043020b09858.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.section1{
+  text-align: center;
+  font-size: 50px;
+  background-color: #84ceeb;
+  width :1000px;
+}
+
+.section2{
+  text-align: left;
+  font-size: 40px;
+  background-color: #84ceeb;
+}
+.topicheadings{
+  font-size: 40px;
+  border: medium;
+  border-style: groove;
+  border-radius: 20px;
+  width: 240px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(3, 29, 77);
+}
+#aboutsection{
+  display: none;
+  font-size: 30px;
+  /* background-image: url("../img/light_texture2234.jpg"); */
+  background-color: #84ceeb;
+  border-radius: 15%;
+}
+#downloadssection{
+  display: none;
+}
+#contactssection{
+  display: none;
+}
+
+a:hover
+{
+text-decoration:underline;
+}
+.topicheadings-download
+{
+  font-size: 40px;
+  border: medium;
+  border-style: groove;
+  border-radius: 20px;
+  width: 240px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: purple;
+
+}
+.topicheadings-download a
+{
+  color: aliceblue;  
+}
+.topicheadings a
+{
+  color: rgb(143, 143, 177);  
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container-contact {
+  border-radius: 5px;
+  background-image: url("../img/abstract-blue-geometric-shapes-background_1035-17545.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 10px;
+
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+#Footer
+{
+  background-color: #48addbec;
+  
+  
+}
+#Footer a{
+  color :blue;
+}
+#header
+{
+  background-color: #48addbec;
+  
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content{
+  flex-grow: 1;
+}

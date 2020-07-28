@@ -1,0 +1,36 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#Footer a{
+    color:rgb(240, 45, 45);
+
+} 
+#header{
+   background-color: rgba(214, 15, 15, 0.377); 
+}   
+#header a{
+  color:rgb(99, 40, 40);
+}
+.main-content{
+    flex-grow: 1;
+}
+#heading{
+    font-size:60px;
+    color: black;
+    font-family: 'Ranchers', cursive;
+    text-align: center
+  }
+p{
+font-size: 40px;
+}
+#message{
+    font-size: 40px;
+    color: rgba(248, 20, 20, 0.568);
+    background-image: url("../img/beautiful-color-gradients-backgrounds-006-lady-lips.png");
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+}

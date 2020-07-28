@@ -1,0 +1,45 @@
+#Footer
+{
+  background-color: rgba(0, 0, 0, 0.315);
+  
+}
+body{
+
+    background-image: url("../img/grey.jpg");
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+#Footer a{
+    color:grey;
+
+} 
+#header{
+   background-color: rgba(24, 23, 23, 0.377); 
+}   
+#header a{
+  color:rgb(27, 0, 0);
+}
+.main-content{
+    flex-grow: 1;
+}
+#section-1{
+  font-size:30px;
+  color: black;
+  font-family: 'Ranchers', cursive;
+  text-align: center
+}
+#Heading{
+  font-size: 130px;
+  
+}
+#par{
+  color: grey;
+}
+#Button-font{
+  font-size: 40px;
+  font-family: 'Playfair Display SC', serif;
+}

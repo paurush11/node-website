@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>About page</title>
+    {{!-- css stylesheet --}}
+    <link rel = 'stylesheet' href="./css/stylesheet1.css">
+    {{!-- jquery --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{!-- google fonts --}}
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@611&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    {{!-- bootstrap --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body >
+ 
+    
+    <div class = "main-content">
+      {{>header}}
+
+    <h1 class="Title container">Hello !</h1>
+
+
+      <div class="container section1">
+      <h1 class="display-3">Paurush here,</h1>
+      <p>I want to welcome you to my new website.This website conatins all my work and projects that i have done and currently working on. This will help me to keep track of my progress.<br>Have a good day! </p>
+      </div>
+
+      <br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class ="topicheadings" id = "aboutme">
+              <a href = "#aboutsection" >About Me</a>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class ="topicheadings" id = "Downloads" >
+              <a href = "#downloadssection" >Downloads</a>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class ="topicheadings" id = "Contact">
+              <a href = "#contactssection" >Contact me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+          <!-- aboutsection -->
+          <div class="container pt-4 col-sm" id = "aboutsection">
+                      <p>Hi, my name is Paurush Batish. I am currently pursuing BTech in Vellore institute of technology,Vellore, India. I will be graduating in the year 2022 and my current CGPA is 8.59/10. I have gained proficiency in the
+              languages Python and c++. I have experienced in web development mainly using nodejs. I have a good ability to clearly communicate complex and technical information. Currently, I am focusing and actively pursuing full-stack web development</p>
+            </p>
+
+            <button id = 'abouthide'>Hide</button>
+          </div> 
+          <!-- downloads setion -->
+          <div class = "container pt-4" id = "downloadssection">
+            <div class ="topicheadings-download" id = "Resume">
+              <a href = "#" >Resume</a>
+            </div>
+            <div class ="topicheadings-download" id = "Projects">
+              <a href = "#" >Projects</a>
+            </div>
+            <button id = 'downloadhide'>Hide</button>
+          </div>
+          <!-- Contactsection -->
+          <br>
+          <div class="container container-contact pt-4" id="contactssection">
+            <div style="text-align:center">
+              <h2>Contact Me</h2>
+              <p>Swing by for a cup of coffee, or leave us a message:</p>
+            </div>
+            <div class="row">
+              <div class="column">
+                <img src="/w3images/map.jpg" style="width:100%">
+              </div>
+              <div class="column">
+                <form action="/action_page.php">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit">
+                </form>
+                <br>
+                <button id = 'contacthide'>Hide</button>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+{{>footer}}
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#aboutme").click(function(){
+        $('#aboutsection').fadeIn();
+      });
+      $('#abouthide').click(function(){
+        $('#aboutsection').fadeOut();
+      })
+      $("#Downloads").click(function(){
+        $('#downloadssection').fadeIn();
+      });
+      $('#downloadhide').click(function(){
+        $('#downloadssection').fadeOut();
+      })
+      $("#Contact").click(function(){
+        $('#contactssection').fadeIn();
+      });
+      $('#contacthide').click(function(){
+        $('#contactssection').fadeOut();
+      })
+      
+
+
+    });
+
+    
+    </script>
+    
+  {{!-- jquery javascript files cdn --}}
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</body>
+</html>

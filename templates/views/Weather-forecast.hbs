@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather-Forecast</title>
+        <link rel="stylesheet" href = "../css/weather.css">
+        
+    {{!-- jquery --}}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{!-- google fonts --}}
+        <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@611&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    {{!-- bootstrap --}}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class = "main-content">
+            {{>header}}
+            <div class="container">
+                <span id = "heading">Weather-Forecast Tool</span>
+                <p>This is our tood to give to current details about your current weather. </p>
+                <p>To proceed type in your location.</p>
+                <form>
+                    
+                        <input type="text"  placeholder="Address">
+                        <button id = "submit">Search</button>
+                
+                </form>
+            </div>
+            <div class="container" id = "message" >
+                <span id = "location"></span><br>
+                <span id = "Temp"> </span><br>
+                <span id = "Feelslike"></span><br>
+                <span id = "Humidity"></span><br>
+            </div>
+            
+        </div>
+     
+
+        {{>footer}}
+        <script type="text/javascript">
+        {{!-- Jquery --}}
+        $(document).ready(function(){
+            $("#submit").click(()=>{
+                $("#message").fadeIn();
+            })
+
+        })
+
+        const add = document.querySelector('input')
+        const weatherform =  document.querySelector('form')
+        const message1 = document.querySelector('#location')
+        const message2 = document.querySelector('#Temp')
+        const message3 = document.querySelector('#Feelslike')
+        const message4 = document.querySelector('#Humidity')
+        weatherform.addEventListener('submit' ,(e)=>{
+            e.preventDefault()
+            fetch("http://localhost:3000/weather?address=" + add.value).then((response)=>{
+                response.json().then((data)=>{
+                    if(data.error)
+                    {
+                        message1.textContent  = data.error;
+                        message2.textContent = ''
+                        message3.textContent = ''
+                        message4.textContent = ''
+                    }
+                    else
+                    {
+                        console.log(data)
+                        message1.textContent = "Location - " + data.location 
+                        message2.textContent = "Current Temperature - " + data.temp
+                        message3.textContent = "Feels like -" + data.feelslike
+                        message4.textContent = "Humidity -" + data.humidity
+
+                    }
+                })
+            })
+
+        })
+        </script>
+        
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		
+    </body>
+</html>
