@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("../img/downloads.png");
+}
+.main-content{
+    flex-grow: 1;
+}
+#Headings{
+    font-size: 70px;
+    font-family: 'Rye', cursive;
+    color: ivory;
+    text-align: left;
+}
+#header{
+    background-color: rgba(151, 145, 145, 0.377); 
+ }   
+#header a{
+   color:rgb(224, 217, 217);
+ }
+#Footer
+{
+    background-color: rgba(94, 91, 91, 0.377); 
+    color: white;
+  
+}
+#Footer a{
+    color:grey;
+
+} 
+#Download-links a{
+        font-size: 30px;
+}
+#Download-links{
+    font-size: 30px;
+    color: azure;
+
+}

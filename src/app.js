@@ -95,12 +95,17 @@ page.get('/contact',(req,res)=>{
 //     res.send()
 // })
 page.get('/home',(req,res)=>{
-    res.send('This is your homepage')
+    res.render('index',{
+        title: 'weather',
+        name : 'Paurush'
+    })
+})
+page.get('/downloads',(req,res)=>{
+    res.render("downloads")
 })
 page.get('*',(req,res)=>{
     res.render('404-error')
 })
-
 page.listen(port,()=>{
     console.log('Started')
 })

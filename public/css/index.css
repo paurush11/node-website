@@ -21,7 +21,7 @@ body{
    background-color: rgba(24, 23, 23, 0.377); 
 }   
 #header a{
-  color:rgb(27, 0, 0);
+  color:rgb(167, 164, 164);
 }
 .main-content{
     flex-grow: 1;

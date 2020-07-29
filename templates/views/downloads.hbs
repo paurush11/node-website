@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Downloads</title>
+         {{!-- css stylesheet --}}
+        <link rel = 'stylesheet' href="../css/downloads.css">
+        {{!-- jquery --}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {{!-- google fonts --}}
+       <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+        {{!-- bootstrap --}}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+       
+        <div class = "container main-content">
+             {{>header}}
+            <span id = "Headings">My Downloads</span>
+            <hr>
+            <span id = "Download-links">
+                Resume -><br>
+                <ul>
+                    <li>
+                        <a href = "../downloadables/resume.pdf" download="resume.pdf">Resume</a><br>
+                    </li>
+                </ul>
+                
+                Certificates-><br>
+                <ul>
+                    <li>
+                        <a href = "../downloadables/MLusingPython.pdf" download="Ml-using-python.pdf">Certificate for Machine learning</a>
+                    </li>
+                    <li>
+                        <a href = "../downloadables/parallelism.pdf" download="Intel-Parallelism.pdf">Certificate for parallelism using intel architecture</a>
+                    </li>
+                    <li>
+                        <a href = "../downloadables/Jpmorgan.pdf" download="Jp-morgan.pdf">Certificate for Software Engg. by JP Morgan and Chase</a>
+                    </li>
+                    <li>
+                         <a href = "../downloadables/Pcap.pdf" download="PCAP.pdf">Certificate for Python</a>
+                    </li>
+                    <li>
+                         <a href = "../downloadables/Microsoft.pdf" download="Microsoft.pdf">Certificate for Virtual Internship in Microsoft</a>
+                    </li>
+                </ul>
+
+            </span>
+             
+        </div>
+       
+
+        {{>footer}}
+
+    </body>
+
+
+
+
+
+
+
+</html>
