@@ -3,7 +3,7 @@ const path = require('path')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const temperature = require('./utils/temperature')
-
+const port = process.env.PORT || 3000
  
 // paths
 const publicdirectorypath = path.join(__dirname,'../public')
@@ -101,6 +101,6 @@ page.get('*',(req,res)=>{
     res.render('404-error')
 })
 
-page.listen(3000,()=>{
+page.listen(port,()=>{
     console.log('Started')
 })
