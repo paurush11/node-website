@@ -1,5 +1,6 @@
 const request = require('postman-request')
 
+// mai kakahn sirji namashkar
 const temperature = (lattitude,longitude,callback) => {
     const url = 'http://api.weatherstack.com/current?access_key=2eb04cc20b40aa64e12e639a000ceb63&query=' + lattitude + ',' + longitude ;
     request({url : url , json : true}, (error,response) =>{
