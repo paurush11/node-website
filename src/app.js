@@ -4,7 +4,8 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const temperature = require('./utils/temperature')
 const port = process.env.PORT || 3000
- 
+
+//sirji namashkar
 // paths
 const publicdirectorypath = path.join(__dirname,'../public')
 const viewpath = path.join(__dirname,"../templates/views")
