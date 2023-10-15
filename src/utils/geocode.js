@@ -5,6 +5,7 @@ const geocode = (address,callback) => {
     request({url : url, json : true}, (error,response) => {
         if(error)
         {
+            // aji sunte ho
             callback('Please check your connectivity')
         }else if(response.body.features.length === 0)
         {
